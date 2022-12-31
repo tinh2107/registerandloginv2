@@ -1,0 +1,168 @@
+/* import quicksand font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    min-width: 100vw;
+}
+
+section {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000, #45f3ff, #000);
+    animation: aminate 5s linear infinite;
+}
+
+@keyframes aminate {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+section span {
+    position: relative;
+    display: block;
+    width: calc(6.25vw - 2px);
+    height: calc(6.25vw - 2px);
+    background: #181818;
+    z-index: 2;
+    transition: 1.5s;
+}
+
+section span:hover {
+    background: #45f3ff;
+    transition: 0s;
+}
+
+@media (max-width:900px) {
+    section span {
+        width: calc(10vw - 2px);
+        height: calc(10vw - 2px);
+    }
+}
+
+@media (max-width:600px) {
+    section span {
+        width: calc(20vw - 2px);
+        height: calc(20vw - 2px);
+    }
+}
+
+form {
+    position: absolute;
+    width: 400px;
+    background: #222;
+    padding: 40px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+form h2 {
+    color: #45f3ff;
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+form p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #a2a3a3
+}
+
+.fa-solid {
+    margin-top: 20px;
+    padding: 0;
+    position: relative;
+    font-size: 2em;
+    color: #45f3ff;
+    /* make icon go to center */
+    left: calc(50% - 0.5em);
+    font-size: 100px;
+}
+
+form .inputBx{
+    position: relative;
+    margin-top: 20px;
+    width:100%;
+}
+form .inputBx input{
+    position: relative;
+    width:100%;
+    background:#333;
+    border:none;
+    outline:none;
+    padding: 25px 10px 7.5px;
+    border-radius:4px;
+    color:#fff;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+form .inputBx i{
+    position:absolute;
+    left:0;
+    padding: 15px 10px;
+    font-style: normal;
+    color:#aaa;
+    transition: 0.5s;
+}
+
+form .inputBx input:focus ~ i,
+form .inputBx input:valid ~ i{
+    color:#45f3ff;
+    transform: translateY(-7.5px);
+    font-size:0.8em;
+}
+
+form .links{
+    position:relative;
+    width: 100%;
+    justify-content: center;
+}
+
+form .links a{
+    color: #45f3ff;
+    text-decoration: none;
+    font-weight:600;
+}
+
+form .inputBx input[type="submit"]{
+    padding:10px;
+    background: #45f3ff;
+    color:#111;
+    font-weight:600;
+    font-size:1.25em;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}

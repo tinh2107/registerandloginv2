@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\hoc\\PRJ301\\Library_for_netbeans\\sqljdbc_9.4\\enu\\mssql-jdbc-9.4.0.jre16.jar",
+        "d:\\JavaWebDevelopment\\apache-tomcat-9.0.63\\lib\\servlet-api.jar",
+        "d:\\JavaWeb_Workspace\\Required Forms\\jars\\activation-1.1.jar",
+        "d:\\JavaWeb_Workspace\\Required Forms\\jars\\javax.mail-1.6.0.jar"
+    ]
+}

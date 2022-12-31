@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 500px;
+    /* background: #1c1c1c; */
+    /* background: ; */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 500px;
+    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    z-index: 1;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 500px;
+    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+    z-index: 1;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.inthe-box {
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+}
+
+
+.form {
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    transition: 1s ease-in-out;
+}
+
+
+.active .sign-in {
+    transform: translateY(110%);
+}
+
+
+.sign-up {
+    position: absolute;
+    top: 0;
+    transform: translateY(-110%);
+}
+
+.active .sign-up {
+    transform: scale(1);
+}
+
+.form h2 {
+    color: #45f3ff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+
+.inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: .5s;
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+    color: #45f3ff;
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: .5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.inputBox input:valid~i,
+.inputBox input:focus~i {
+    height: 44px;
+}
+
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.links p {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.links a:hover,
+.links a:nth-child(2) {
+    color: #45f3ff;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* remember css */
+.remember {
+    margin: 20px 15px 0px 0;
+}
+
+.remember label {
+    color: #45f3ff;
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+.remember input {
+    accent-color: #45f3ff;
+    height: 0.8em;
+}
+
+.social-platform {
+    text-align: center;
+    margin-top: 20px;
+    color: #45f3ff;
+    font-size: 0.8em;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 1px solid #45f3ff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    margin: 12px 6px 0;
+}
+
+.social-icons a:hover {
+    background: #45f3ff80;
+    transition: .5s;
+}
+
+.social-icons a i {
+    color: #45f3ff;
+    font-size: 14px;
+    transition: .5s;
+}
+
+.social-icons a:hover i {
+    color: rgba(0, 0, 0, .3);
+}
+
+
+/* input box of sign up */
+
+.inputBox2 {
+    position: relative;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.inputBox2 input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputBox2 span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: .5s;
+}
+
+.inputBox2 input:valid~span,
+.inputBox2 input:focus~span {
+    color: #45f3ff;
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.inputBox2 i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: .5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.inputBox2 input:valid~i,
+.inputBox2 input:focus~i {
+    height: 30px;
+}
+
+
+/* css animated modal */
+
+svg {
+    width: 560px;
+    position: relative;
+    height: 280px;
+    margin: 0 auto;
+    display: block;
+}
+
+svg line {
+    stroke-width: 2px;
+    stroke: #45f3ff;
+}
+
+svg #svg_2 {
+    stroke-dasharray: 1680;
+    stroke-dashoffset: 1680;
+}
+
+svg #svg_4 {
+    stroke-dasharray: 1680;
+    stroke-dashoffset: -280;
+}
+
+svg #svg_3 {
+    stroke-dasharray: 1680;
+    stroke-dashoffset: -580;
+}
+
+svg #svg_5 {
+    stroke-dasharray: 1680;
+    stroke-dashoffset: -280;
+}
+
+@keyframes anim-dash {
+    90% {
+        stroke: #45f3ff;
+    }
+
+    100% {
+        stroke: #ffffff;
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -999;
+}
+
+.modal {
+    position: absolute;
+    width: 560px;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -40%);
+}
+
+.modal-inner {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 554px;
+    height: 274px;
+    background: rgba(255, 255, 255, 1);
+    opacity: 0;
+}
+
+.modal-close {
+    float: right;
+    z-index: +2;
+    color: #424242;
+    margin: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    line-height: 20px;
+    height: 20px;
+    width: 20px;
+}
+
+.modal-inner h3 {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    padding: 20px 20px 10px 20px;
+}
+
+.overlay:target .modal, .overlay:target {
+    animation: display .6s forwards;
+    z-index: 100;
+}
+
+.overlay:target .modal svg line {
+    animation: anim-dash .6s forwards;
+    animation-delay: .6s;
+}
+
+.overlay:target .modal .modal-inner {
+    animation: display .6s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes display {
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.forgot-input {
+    margin-left: 25px;
+}
+
+
+/* #forgot-button:hover{
+    background-position: 100%;
+  color: #c266d3;
+} */
+
+
+
+
+
+#text {
+    margin-top: -55px;
+    text-align: center;
+}
+
+.svg-wrapper {
+    margin-top: auto;
+    position: relative;
+    width: 150px;
+    height: 43px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 15px;
+    margin-right: 5px
+}
+
+/*
+    This is where we define the fill, color, thickness,
+    and stroke pattern of the SVG when there is no hover.
+    The dasharray and offset together define the line position
+    under the words. Here's also where the transition speed is set.
+  */
+
+#shape {
+    stroke-width: 6px;
+    fill: transparent;
+    stroke: #009FFD;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease;
+}
+
+.svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke: #06D6A0;
+}
+
+#forgot-button {
+    width: auto;
+    padding: auto;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.1em;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+}
+
+#forgot-button:hover {
+    color: #06D6A0;
+    /* background-color: #009FFD; */
+    transition: all 0.5s ease-in-out;
+}
+
+#confirm-svg {
+    width: 150px;
+    height: 43px;
+    position: initial;
+}
+
+.forgot-input input:valid~span,
+.forgot-input input:focus~span{
+    color: #009FFD;
+}
+
+.forgot-input i{
+    background-color: #009FFD;
+}
+
+.modal-inner p{
+    margin: 25px;
+    color: #4343438a;
+}
